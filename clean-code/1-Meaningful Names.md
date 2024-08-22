@@ -212,7 +212,6 @@ public:
 - `DataProcessor` is a generic name that does not convey the specific role or responsibilities of the class, making it less clear what the class is actually responsible for.
 - `UserAccountManager` is a meaningful name that clearly indicates the class manages user accounts, making it immediately apparent what the class does and improving code readability and maintainability.
 
-
 ## Use Meaningful Function Names
 
 Function names should clearly describe what the function does. Avoid vague or generic names that require additional context or explanation. This helps in understanding the purpose of the function at a glance.
@@ -252,4 +251,54 @@ Function names should clearly describe what the function does. Avoid vague or ge
     ```cpp
     void setName(const std::string& name);  // Sets the name of an entity
     void setAccountBalance(double balance);  // Sets the account's balance
+    ```
+
+## Variable Naming Conventions
+
+Well-chosen variable names can significantly enhance the readability and maintainability of your code. Here are some fundamental principles and examples for naming variables effectively:
+
+1. **Nouns and Noun Phrases**
+
+    Variables should typically be named using nouns or noun phrases that convey the purpose and content of the variable. These names should be clear and descriptive, making it easy for other developers (including your future self) to understand the variable's role in the code:
+
+    ```cpp
+    // Represents an account object
+    Account account;  
+
+    // A list that contains customer objects
+    std::vector<Customer> customerList;  
+
+    // Holds the total amount of something
+    double totalAmount;
+    ```  
+
+2. **Boolean Variables and Predicates**
+
+    Boolean variables are often used in conditional statements, where their names should be structured as predicates. This naming convention makes the code more natural to read and understand:
+
+    ```cpp
+    bool isEmpty = true;  // Indicates if something is empty
+
+    if (isEmpty) {
+        // Code to execute if the variable is true
+    }
+
+    // Determines if something is valid
+    bool isValid = checkValidity();
+
+    if (isValid) {
+        // Code to execute if the variable is true
+    }
+    ```
+
+3. **Enums and Adjectives**
+
+    For enum types, which represent a set of constant values, it's a common convention to use adjectives in the enum values. This helps to add context and meaning to the code:
+
+    ```cpp
+    enum Status {
+        PENDING,    // Indicates a pending status
+        CLOSED,     // Indicates a closed status
+        CANCELED    // Indicates a canceled status
+    };
     ```
